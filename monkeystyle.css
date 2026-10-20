@@ -191,6 +191,12 @@ a { color: inherit; }
   max-width: 62ch;   /* comfortable reading width */
 }
 
+/* Code inside reflections */
+.print code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  color: var(--amber);
+}
 /* Screenshots */
 .print figure { margin: 0; }
 .print img {
