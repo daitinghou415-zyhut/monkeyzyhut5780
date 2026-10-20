@@ -8,15 +8,15 @@
 </head>
 <body>
 
-  <!-- ① 站名区：左边大字站名，右边课程和学年 -->
+  <!-- 1. Masthead: site name on the left, course and year on the right -->
   <header class="mast">
     <h1>monkeyzyhut5780</h1>
     <p class="meta">COMM5780 Digital Practices<br>2026–2027</p>
   </header>
 
-  <!-- ② 接触印样：12 个格子 -->
-  <!-- 亮格 = <a class="frame lit" href="#...">，可以点开 -->
-  <!-- 暗格 = <span class="frame off">，还没有内容，不能点 -->
+  <!-- 2. Contact sheet: 12 frames -->
+  <!-- Lit frame  = <a class="frame lit" href="#...">  (has content, can be opened) -->
+  <!-- Dark frame = <span class="frame off">           (no content yet, cannot be opened) -->
   <main class="sheet" aria-label="Contact sheet">
     <a class="frame lit" href="#about"><span class="no">00</span><span class="name">About</span></a>
     <span class="frame off"><span class="no">01</span><span class="name">Week 1</span></span>
@@ -32,7 +32,8 @@
     <span class="frame off"><span class="no">11</span><span class="name">Week 11</span></span>
   </main>
 
-  <!-- ③ 放大镜层：点亮格后打开的页面。id 要和上面格子的 href 对应 -->
+  <!-- 3. Prints: the pages that open from a lit frame.
+       Each section's id must match its frame's href (#week-3 -> id="week-3") -->
 
   <!-- About -->
   <section class="print" id="about" aria-label="About">
@@ -64,7 +65,7 @@
         <p>Reflection coming soon.</p>
       </div>
       <div class="col">
-        <!-- 截图之后放在这里 -->
+        <!-- Screenshots go here -->
       </div>
     </div>
   </section>
