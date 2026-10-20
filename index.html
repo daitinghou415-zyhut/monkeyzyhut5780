@@ -1,20 +1,73 @@
-monkeyzyhut5780
-COMM5780 Digital Practices
-2026–2027
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>monkeyzyhut5780</title>
+  <link rel="stylesheet" href="monkeystyle.css">
+</head>
+<body>
 
-00About 01Week 1 02Week 2 03Week 3 04Week 4 05Week 5 06Week 6 07Week 7 08Week 8 09Week 9 10Week 10 11Week 11
-Close
-About
-Welcome to zyhut's version
+  <!-- ① 站名区：左边大字站名，右边课程和学年 -->
+  <header class="mast">
+    <h1>monkeyzyhut5780</h1>
+    <p class="meta">COMM5780 Digital Practices<br>2026–2027</p>
+  </header>
 
-Name
-Daiting Hou
-Studying
-MA Digital Media, University of Leeds
-Interests
-Photography, skiing, fitness, music
-Email
-xjjn0137@leeds.ac.uk
-Close
-Week 3
-Reflection coming soon.
+  <!-- ② 接触印样：12 个格子 -->
+  <!-- 亮格 = <a class="frame lit" href="#...">，可以点开 -->
+  <!-- 暗格 = <span class="frame off">，还没有内容，不能点 -->
+  <main class="sheet" aria-label="Contact sheet">
+    <a class="frame lit" href="#about"><span class="no">00</span><span class="name">About</span></a>
+    <span class="frame off"><span class="no">01</span><span class="name">Week 1</span></span>
+    <span class="frame off"><span class="no">02</span><span class="name">Week 2</span></span>
+    <a class="frame lit" href="#week-3"><span class="no">03</span><span class="name">Week 3</span></a>
+    <span class="frame off"><span class="no">04</span><span class="name">Week 4</span></span>
+    <span class="frame off"><span class="no">05</span><span class="name">Week 5</span></span>
+    <span class="frame off"><span class="no">06</span><span class="name">Week 6</span></span>
+    <span class="frame off"><span class="no">07</span><span class="name">Week 7</span></span>
+    <span class="frame off"><span class="no">08</span><span class="name">Week 8</span></span>
+    <span class="frame off"><span class="no">09</span><span class="name">Week 9</span></span>
+    <span class="frame off"><span class="no">10</span><span class="name">Week 10</span></span>
+    <span class="frame off"><span class="no">11</span><span class="name">Week 11</span></span>
+  </main>
+
+  <!-- ③ 放大镜层：点亮格后打开的页面。id 要和上面格子的 href 对应 -->
+
+  <!-- About -->
+  <section class="print" id="about" aria-label="About">
+    <a class="close" href="#">Close</a>
+    <div class="print-body">
+      <div class="col">
+        <h2>About</h2>
+        <p class="welcome">Welcome to zyhut's version</p>
+        <dl class="facts">
+          <dt>Name</dt>
+          <dd>Daiting Hou</dd>
+          <dt>Studying</dt>
+          <dd>MA Digital Media, University of Leeds</dd>
+          <dt>Interests</dt>
+          <dd>Photography, skiing, fitness, music</dd>
+          <dt>Email</dt>
+          <dd>xjjn0137@leeds.ac.uk</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Week 3 -->
+  <section class="print" id="week-3" aria-label="Week 3">
+    <a class="close" href="#">Close</a>
+    <div class="print-body">
+      <div class="col">
+        <h2>Week 3</h2>
+        <p>Reflection coming soon.</p>
+      </div>
+      <div class="col">
+        <!-- 截图之后放在这里 -->
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
