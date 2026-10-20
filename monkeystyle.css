@@ -1,0 +1,251 @@
+/* =========================================================
+   monkeyzyhut5780 — darkroom contact sheet
+   ========================================================= */
+
+/* Fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap");
+
+/* ---------- 1. Colours and fonts (change them here only) ---------- */
+:root {
+  --black: #0f0f11;     /* page background */
+  --film: #18181b;      /* dark, unexposed frame */
+  --film-text: #3a3a3f; /* text on a dark frame */
+  --paper: #ece8e0;     /* lit frame, like photo paper */
+  --ink: #141414;       /* text on a lit frame */
+  --silver: #a29d94;    /* small grey labels */
+  --amber: #b98a4a;     /* film-edge numbers */
+  --red: #c4442b;       /* safelight red, used sparingly */
+
+  --display: "Bodoni Moda", "Didot", "Times New Roman", serif;
+  --mono: "IBM Plex Mono", "SF Mono", Menlo, monospace;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---------- 2. Page basics ---------- */
+* { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  background: var(--black);
+  color: var(--paper);
+  font-family: var(--body);
+  min-height: 100vh;
+  min-height: 100dvh;           /* fits the real screen height on phones */
+  display: flex;
+  flex-direction: column;        /* masthead on top, sheet fills the rest */
+  gap: 20px;
+  padding: clamp(16px, 3vw, 36px);
+}
+
+a { color: inherit; }
+
+/* Visible outline for keyboard users */
+:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+/* ---------- 3. Masthead ---------- */
+.mast {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.mast h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(34px, 6vw, 80px);
+  line-height: 0.9;
+  letter-spacing: -0.025em;
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+
+.mast .meta {
+  margin: 0;
+  font: 11px/1.6 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--silver);
+  text-align: right;
+}
+
+/* ---------- 4. Contact sheet ---------- */
+.sheet {
+  flex: 1;                                   /* fill all remaining height */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);     /* 6 frames per row */
+  grid-auto-rows: 1fr;                       /* rows share the height equally */
+  gap: 8px;
+  padding: 18px 10px;
+  background-color: #08080a;
+  /* sprocket holes along the top and bottom edges */
+  background-image:
+    radial-gradient(circle, #1c1c1f 3px, transparent 3.5px),
+    radial-gradient(circle, #1c1c1f 3px, transparent 3.5px);
+  background-size: 18px 10px;
+  background-position: 0 4px, 0 calc(100% - 4px);
+  background-repeat: repeat-x;
+}
+
+/* Every frame */
+.frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  min-height: 90px;
+  text-decoration: none;
+}
+
+.frame .no {
+  font: 10px var(--mono);
+  letter-spacing: 0.08em;
+}
+
+.frame .name {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(20px, 2.6vw, 36px);
+  line-height: 1;
+}
+
+/* Dark frame: not exposed yet */
+.frame.off {
+  background: var(--film);
+  color: var(--film-text);
+}
+.frame.off .no { color: #4a4238; }
+
+/* Lit frame: printed, can be opened */
+.frame.lit {
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 0 0 1px #fff, 0 0 28px rgba(236, 232, 224, 0.16);
+  transition: box-shadow 0.25s ease, filter 0.25s ease;
+}
+.frame.lit .no { color: var(--red); }
+.frame.lit:hover,
+.frame.lit:focus-visible {
+  box-shadow: 0 0 0 1px #fff, 0 0 48px rgba(236, 232, 224, 0.34);
+  filter: brightness(1.04);
+}
+
+/* ---------- 5. Prints (the pages that open from a lit frame) ---------- */
+/* Hidden by default. ":target" means "the section whose id is in the address bar",
+   so clicking href="#week-3" shows the section with id="week-3". */
+.print {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: rgba(9, 9, 11, 0.97);
+  overflow-y: auto;
+  padding: clamp(16px, 3vw, 36px);
+}
+.print:target { display: block; }
+
+.close {
+  display: inline-block;
+  font: 11px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #55524c;
+  padding: 6px 12px;
+  margin-bottom: 24px;
+}
+.close:hover { border-color: var(--paper); }
+
+.print-body {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;   /* text left, screenshots right */
+  gap: 32px;
+  max-width: 1200px;
+}
+
+.col {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  min-width: 0;
+}
+
+.print h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 0.95;
+  color: #fff;
+}
+
+.print p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 62ch;   /* comfortable reading width */
+}
+
+/* Screenshots */
+.print figure { margin: 0; }
+.print img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #4d4a45;
+}
+.print figcaption {
+  margin-top: 6px;
+  font: 11px/1.5 var(--mono);
+  color: var(--silver);
+}
+
+/* About page */
+.welcome {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(22px, 2.4vw, 30px) !important;
+  line-height: 1.2 !important;
+}
+.facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px 20px;
+  margin: 0;
+  font-size: 16px;
+}
+.facts dt {
+  font: 11px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber);
+  padding-top: 4px;
+}
+.facts dd { margin: 0; overflow-wrap: anywhere; }
+
+/* "Develop" effect: content fades up from dark when a print opens */
+@keyframes develop {
+  from { filter: brightness(0.15) contrast(0.6); }
+  to   { filter: none; }
+}
+.print:target .col > * { animation: develop 1.1s ease both; }
+.print:target .col > *:nth-child(2) { animation-delay: 0.15s; }
+.print:target .col > *:nth-child(3) { animation-delay: 0.3s; }
+.print:target .col > *:nth-child(n+4) { animation-delay: 0.45s; }
+
+/* ---------- 6. Phones ---------- */
+@media (max-width: 720px) {
+  .sheet { grid-template-columns: repeat(3, 1fr); }   /* 3 frames per row */
+  .mast .meta { text-align: left; }
+  .print-body { grid-template-columns: 1fr; }         /* text above screenshots */
+}
+
+/* People who turn off animations in their system settings */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
