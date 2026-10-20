@@ -20,7 +20,7 @@
   <main class="sheet" aria-label="Contact sheet">
     <a class="frame lit" href="#about"><span class="no">00</span><span class="name">About</span></a>
     <span class="frame off"><span class="no">01</span><span class="name">Week 1</span></span>
-    <span class="frame off"><span class="no">02</span><span class="name">Week 2</span></span>
+    <a class="frame lit" href="#week-2"><span class="no">02</span><span class="name">Week 2</span></a>
     <a class="frame lit" href="#week-3"><span class="no">03</span><span class="name">Week 3</span></a>
     <span class="frame off"><span class="no">04</span><span class="name">Week 4</span></span>
     <span class="frame off"><span class="no">05</span><span class="name">Week 5</span></span>
@@ -56,36 +56,53 @@
     </div>
   </section>
 
+  <!-- Week 2 -->
+  <section class="print" id="week-2" aria-label="Week 2">
+    <a class="close" href="#">Close</a>
+    <div class="print-body">
+      <div class="col">
+        <h2>Week 2</h2>
+        <p>This week I learned two ways to make a website. One is CampusPress, which is a blogging platform. The other is GitHub, where I write the code myself and put it online with GitHub Pages. This site is made the second way. I also learned that HTML is the main content of a website, and CSS is what makes it look the way it does.</p>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </section>
+
   <!-- Week 3 -->
   <section class="print" id="week-3" aria-label="Week 3">
     <a class="close" href="#">Close</a>
     <div class="print-body">
       <div class="col">
         <h2>Week 3</h2>
-        <p>Reflection coming soon.</p>
+        <p>This week I used the Web Scraper extension in Chrome to try to get data from BBC iPlayer.</p>
+        <p>I started with the iPlayer homepage. I made a sitemap and a selector, <code>[class*="carrousel__item"]</code>. It found 106 programme cards (screenshot 1), but when I checked the data preview, there was nothing in it (screenshot 2). I went through the workshop task again and still got no data, so I asked AI for help.</p>
+        <p>That's when I found out what was wrong. An Element selector only picks out the box around each card. It doesn't take any text, so I had to add a Text selector inside it. That didn't go smoothly either. The page jumped to a programme page, and later the extension lost connection to the tab (screenshots 3 and 4).</p>
+        <p>So I tried the A–Z page. It was much easier. I only needed one Link selector, and I got a list of programme links (screenshot 5). The page says there are 274 programmes, but my file only has 200 rows.</p>
+        <p>What I learned is that scraping is easy when the page is a simple list where every item looks the same. A homepage with moving rows and things that load as you scroll is a lot harder.</p>
       </div>
       <div class="col">
         <figure>
           <img src="images/week3-1.png" alt="Web Scraper selecting 106 programme cards on the BBC iPlayer homepage">
-          <figcaption>Fig. 3.1 · The Element selector found 106 programme cards on the iPlayer homepage.</figcaption>
+          <figcaption>Screenshot 1 · My selector found 106 programme cards on the homepage.</figcaption>
         </figure>
         <figure>
           <img src="images/week3-2.png" alt="Web Scraper data preview showing no data extracted">
-          <figcaption>Fig. 3.2 · Data preview: "No data extracted yet." The Element selector had no child selector.</figcaption>
+          <figcaption>Screenshot 2 · But the data preview was empty.</figcaption>
         </figure>
         <figure>
           <img src="images/week3-3.png" alt="TypeError in Web Scraper after the page moved to a programme page">
-          <figcaption>Fig. 3.3 · The page moved to a programme page, so the parent selector found nothing.</figcaption>
+          <figcaption>Screenshot 3 · The page jumped to a programme page and the selector stopped working.</figcaption>
         </figure>
         <figure>
           <img src="images/week3-4.png" alt="FAILED_TO_CONNECT_TO_CHROME_TAB error in Web Scraper">
-          <figcaption>Fig. 3.4 · The extension lost its connection to the tab after going back in the browser.</figcaption>
+          <figcaption>Screenshot 4 · The extension lost connection to the tab.</figcaption>
         </figure>
         <figure>
           <img src="images/week3-5.png" alt="Scraped table of programme links from the BBC iPlayer A–Z page">
-          <figcaption>Fig. 3.5 · Success on the A–Z page: one Link selector collected the programme links.</figcaption>
+          <figcaption>Screenshot 5 · The A–Z page worked: a table of programme links.</figcaption>
         </figure>
-        <p><a href="data/iplayer-a-z.csv">Download the dataset (CSV, 200 rows)</a></p>
+        <p><a href="data/iplayer-a-z.csv">Download my dataset (CSV, 200 rows)</a></p>
       </div>
     </div>
   </section>
