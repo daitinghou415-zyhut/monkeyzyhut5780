@@ -13,9 +13,8 @@
   --paper: #ece8e0;     /* lit frame, like photo paper */
   --ink: #141414;       /* text on a lit frame */
   --silver: #a29d94;    /* small grey labels */
-  --amber: #b98a4a;     /* film-edge numbers */
+  --pink: #ff8fbf;      /* accent pink */
   --red: #c4442b;       /* safelight red, used sparingly */
-
   --display: "Bodoni Moda", "Didot", "Times New Roman", serif;
   --mono: "IBM Plex Mono", "SF Mono", Menlo, monospace;
   --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
@@ -195,7 +194,7 @@ a { color: inherit; }
 .print code {
   font-family: var(--mono);
   font-size: 0.85em;
-  color: var(--amber);
+  color: var(--pink);
 }
 /* Screenshots */
 .print figure { margin: 0; }
@@ -229,7 +228,7 @@ a { color: inherit; }
   font: 11px var(--mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--amber);
+    color: var(--pink);
   padding-top: 4px;
 }
 .facts dd { margin: 0; overflow-wrap: anywhere; }
