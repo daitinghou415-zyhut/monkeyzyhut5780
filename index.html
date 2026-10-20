@@ -69,7 +69,7 @@
     </div>
   </section>
 
-  <!-- Week 3 -->
+   <!-- Week 3 -->
   <section class="print" id="week-3" aria-label="Week 3">
     <a class="close" href="#">Close</a>
     <div class="print-body">
@@ -82,30 +82,40 @@
         <p>What I learned is that scraping is easy when the page is a simple list where every item looks the same. A homepage with moving rows and things that load as you scroll is a lot harder.</p>
       </div>
       <div class="col">
-        <figure>
-          <img src="images/week3-1.png" alt="Web Scraper selecting 106 programme cards on the BBC iPlayer homepage">
-          <figcaption>Screenshot 1 · My selector found 106 programme cards on the homepage.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/week3-2.png" alt="Web Scraper data preview showing no data extracted">
-          <figcaption>Screenshot 2 · But the data preview was empty.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/week3-3.png" alt="TypeError in Web Scraper after the page moved to a programme page">
-          <figcaption>Screenshot 3 · The page jumped to a programme page and the selector stopped working.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/week3-4.png" alt="FAILED_TO_CONNECT_TO_CHROME_TAB error in Web Scraper">
-          <figcaption>Screenshot 4 · The extension lost connection to the tab.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/week3-5.png" alt="Scraped table of programme links from the BBC iPlayer A–Z page">
-          <figcaption>Screenshot 5 · The A–Z page worked: a table of programme links.</figcaption>
-        </figure>
+        <div class="slides">
+          <div class="track">
+            <figure>
+              <img src="images/week3-1.png" alt="Web Scraper selecting 106 programme cards on the BBC iPlayer homepage">
+              <figcaption>Screenshot 1 · My selector found 106 programme cards on the homepage.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/week3-2.png" alt="Web Scraper data preview showing no data extracted">
+              <figcaption>Screenshot 2 · But the data preview was empty.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/week3-3.png" alt="TypeError in Web Scraper after the page moved to a programme page">
+              <figcaption>Screenshot 3 · The page jumped to a programme page and the selector stopped working.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/week3-4.png" alt="FAILED_TO_CONNECT_TO_CHROME_TAB error in Web Scraper">
+              <figcaption>Screenshot 4 · The extension lost connection to the tab.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/week3-5.png" alt="Scraped table of programme links from the BBC iPlayer A–Z page">
+              <figcaption>Screenshot 5 · The A–Z page worked: a table of programme links.</figcaption>
+            </figure>
+          </div>
+          <div class="slide-nav">
+            <button class="prev" type="button">← Prev</button>
+            <span class="count">1 / 5</span>
+            <button class="next" type="button">Next →</button>
+          </div>
+        </div>
         <p><a href="data/iplayer-a-z.csv">Download my dataset (CSV, 200 rows)</a></p>
       </div>
     </div>
   </section>
 
+  <script src="script.js"></script>
 </body>
 </html>
