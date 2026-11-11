@@ -281,12 +281,12 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
-/* 隐藏所有图片下方的文字标注 */
+/* Hide captions below all images. */
 .print figcaption {
   display: none;
 }
 
-/* Week 5 翻页键与左侧反思底部对齐 */
+/* Align the Week 5 navigation with the bottom of the reflection. */
 @media (min-width: 721px) {
   #week-5 .print-body > .col:last-child {
     display: flex;
