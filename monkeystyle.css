@@ -281,3 +281,29 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+/* 隐藏所有图片下方的文字标注 */
+.print figcaption {
+  display: none;
+}
+
+/* Week 5 翻页键与左侧反思底部对齐 */
+@media (min-width: 721px) {
+  #week-5 .print-body > .col:last-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #week-5 .slides {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  #week-5 .track {
+    flex: 0 0 auto;
+  }
+
+  #week-5 .slide-nav {
+    margin-top: auto;
+  }
+}
