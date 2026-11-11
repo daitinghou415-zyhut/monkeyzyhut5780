@@ -9,6 +9,8 @@ document.querySelectorAll('.slides').forEach(function (slides) {
 
   // Which screenshot is showing now (0 = the first one)
   function current() {
+    // A week's panel is hidden until opened, so its width can initially be zero.
+    if (!track.clientWidth) return 0;
     return Math.round(track.scrollLeft / track.clientWidth);
   }
 

@@ -22,8 +22,8 @@
     <span class="frame off"><span class="no">01</span><span class="name">Week 1</span></span>
     <a class="frame lit" href="#week-2"><span class="no">02</span><span class="name">Week 2</span></a>
     <a class="frame lit" href="#week-3"><span class="no">03</span><span class="name">Week 3</span></a>
-    <span class="frame off"><span class="no">04</span><span class="name">Week 4</span></span>
-    <span class="frame off"><span class="no">05</span><span class="name">Week 5</span></span>
+    <a class="frame lit" href="#week-4"><span class="no">04</span><span class="name">Week 4</span></a>
+    <a class="frame lit" href="#week-5"><span class="no">05</span><span class="name">Week 5</span></a>
     <span class="frame off"><span class="no">06</span><span class="name">Week 6</span></span>
     <span class="frame off"><span class="no">07</span><span class="name">Week 7</span></span>
     <span class="frame off"><span class="no">08</span><span class="name">Week 8</span></span>
@@ -112,6 +112,67 @@
           </div>
         </div>
         <p><a href="data/iplayer-a-z.csv">Download my dataset (CSV, 200 rows)</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Week 4 -->
+  <section class="print" id="week-4" aria-label="Week 4">
+    <a class="close" href="#">Close</a>
+    <div class="print-body">
+      <div class="col">
+        <h2>Week 4</h2>
+        <p>This week our group chose the first scenario: helping an arts and humanities faculty understand how students use generative AI. We focused on writing, especially the concern that AI might make work more similar and reduce a writer's personal voice.</p>
+        <p>The hardest part was choosing search terms. Broad queries brought back many different discussions, including material that did not really fit our question. More specific queries sometimes returned very little. We were also still learning how to use Bluesky and Communalytic, so it was difficult to tell whether we needed to change our keywords or how we were using the tools.</p>
+        <p>This made me realise that collecting data starts before pressing a button. A phrase such as &quot;losing my voice AI&quot; already focuses on a particular concern. Different words can make some experiences easier to find and leave others out. More results do not automatically mean more useful data.</p>
+        <p>I also need to distinguish posts about students from posts written by students. Public discussion can help us explore the topic, but it cannot automatically represent students' own experiences. If I repeated the task, I would test a small set of results first, record why we changed each query, and include different perspectives. I would also avoid publishing usernames or identifiable quotations.</p>
+      </div>
+      <div class="col">
+        <figure>
+          <img src="images/week4-collection-output.png" alt="Group collection log reporting 151 records across five Bluesky search queries">
+          <figcaption>Group collection output · The displayed totals are cumulative. The final output reports 151 records; this does not establish 151 unique posts or 151 students.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Week 5 -->
+  <section class="print" id="week-5" aria-label="Week 5">
+    <a class="close" href="#">Close</a>
+    <div class="print-body">
+      <div class="col">
+        <h2>Week 5</h2>
+        <p>This week we looked at how to communicate the data collected by our group. Our group document included a collection output, a keyword bar chart, a daily timeline, a sentiment histogram and a word cloud. The output reported 151 records, but that does not tell us how many were unique or written by students.</p>
+        <p>The keyword chart made our search problem easier to see. Three queries returned 50 records each, while another returned only one. However, the workflow requested up to 50 posts per query. A bar reaching 50 does not show the full amount of discussion, so I cannot treat these counts as a ranking of how popular each topic is.</p>
+        <p>The word cloud also needs context. Large words such as &quot;writing&quot; and &quot;voice&quot; partly reflect what we searched for. Their size does not tell us whether people support or criticise AI. The sentiment chart has many scores near zero or above it, so it does not support a simple claim that the discussion was mostly negative. I would need to read the posts alongside the automated scores.</p>
+        <p>For our intended audience, the faculty, I would explain these limits alongside the charts. The results can illustrate public discussion, but they do not prove that AI causes students' writing to become similar. Next time, I would check duplicate records, review relevance and define a clear numerical coding scheme before visualising the data. I learned that a clear-looking chart can still give a misleading impression if the collection process is left unexplained.</p>
+      </div>
+      <div class="col">
+        <div class="slides">
+          <div class="track">
+            <figure>
+              <img src="images/week5-keywords.png" alt="Bar chart showing 50 records for three queries and one record for another">
+              <figcaption>Keyword counts in the group output. Three queries reached the stated limit of 50; these are retrieval counts, not overall topic popularity.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/week5-time-trend.png" alt="Daily counts of posts included in the group's collected sample">
+              <figcaption>Dates of records in this sample. This is not a complete timeline of all Bluesky discussion.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/week5-sentiment.png" alt="Sentiment histogram with scores on both sides of zero and many non-negative scores">
+              <figcaption>Automated polarity scores need the context of the original posts. This chart does not establish that discussion was mostly negative.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/week5-word-cloud.png" alt="Word cloud from the collected posts with large words including writing, voice and humanities">
+              <figcaption>Frequent words are shaped by the search terms and text preparation. Size does not show agreement or disagreement.</figcaption>
+            </figure>
+          </div>
+          <div class="slide-nav">
+            <button class="prev" type="button">← Prev</button>
+            <span class="count">1 / 4</span>
+            <button class="next" type="button">Next →</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
