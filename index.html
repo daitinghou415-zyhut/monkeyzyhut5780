@@ -24,7 +24,7 @@
     <a class="frame lit" href="#week-3"><span class="no">03</span><span class="name">Week 3</span></a>
     <a class="frame lit" href="#week-4"><span class="no">04</span><span class="name">Week 4</span></a>
     <a class="frame lit" href="#week-5"><span class="no">05</span><span class="name">Week 5</span></a>
-    <span class="frame off"><span class="no">06</span><span class="name">Week 6</span></span>
+    <a class="frame lit" href="#week-6"><span class="no">06</span><span class="name">Week 6</span></a>
     <span class="frame off"><span class="no">07</span><span class="name">Week 7</span></span>
     <span class="frame off"><span class="no">08</span><span class="name">Week 8</span></span>
     <span class="frame off"><span class="no">09</span><span class="name">Week 9</span></span>
@@ -34,6 +34,156 @@
 
   <!-- 3. Prints: the pages that open from a lit frame.
        Each section's id must match its frame's href (#week-3 -> id="week-3") -->
+
+  <!-- About -->
+  <section class="print" id="about" aria-label="About">
+    <a class="close" href="#">Close</a>
+    <div class="print-body">
+      <div class="col">
+        <h2>About</h2>
+        <p class="welcome">Welcome to zyhut's version</p>
+        <dl class="facts">
+          <dt>Name</dt>
+          <dd>Daiting Hou</dd>
+          <dt>Studying</dt>
+          <dd>MA Digital Media, University of Leeds</dd>
+          <dt>Interests</dt>
+          <dd>Photography, skiing, fitness, music</dd>
+          <dt>Email</dt>
+          <dd>xjjn0137@leeds.ac.uk</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Week 2 -->
+  <section class="print" id="week-2" aria-label="Week 2">
+    <a class="close" href="#">Close</a>
+    <div class="print-body">
+      <div class="col">
+        <h2>Week 2</h2>
+        <p>This week I learned two ways to make a website. One is CampusPress, which is a blogging platform. The other is GitHub, where I write the code myself and put it online with GitHub Pages. This site is made the second way. I also learned that HTML is the main content of a website, and CSS is what makes it look the way it does.</p>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </section>
+
+   <!-- Week 3 -->
+  <section class="print" id="week-3" aria-label="Week 3">
+    <a class="close" href="#">Close</a>
+    <div class="print-body">
+      <div class="col">
+        <h2>Week 3</h2>
+        <p>This week I used the Web Scraper extension in Chrome to try to get data from BBC iPlayer.</p>
+        <p>I started with the iPlayer homepage. I made a sitemap and a selector, <code>[class*="carrousel__item"]</code>. It found 106 programme cards (screenshot 1), but when I checked the data preview, there was nothing in it (screenshot 2). I went through the workshop task again and still got no data, so I asked AI for help.</p>
+        <p>That's when I found out what was wrong. An Element selector only picks out the box around each card. It doesn't take any text, so I had to add a Text selector inside it. That didn't go smoothly either. The page jumped to a programme page, and later the extension lost connection to the tab (screenshots 3 and 4).</p>
+        <p>So I tried the A–Z page. It was much easier. I only needed one Link selector, and I got a list of programme links (screenshot 5). The page says there are 274 programmes, but my file only has 200 rows.</p>
+        <p>What I learned is that scraping is easy when the page is a simple list where every item looks the same. A homepage with moving rows and things that load as you scroll is a lot harder.</p>
+      </div>
+      <div class="col">
+        <div class="slides">
+          <div class="track">
+            <figure>
+              <img src="images/week3-1.png" alt="Web Scraper selecting 106 programme cards on the BBC iPlayer homepage">
+            </figure>
+            <figure>
+              <img src="images/week3-2.png" alt="Web Scraper data preview showing no data extracted">
+            </figure>
+            <figure>
+              <img src="images/week3-3.png" alt="TypeError in Web Scraper after the page moved to a programme page">
+            </figure>
+            <figure>
+              <img src="images/week3-4.png" alt="FAILED_TO_CONNECT_TO_CHROME_TAB error in Web Scraper">
+            </figure>
+            <figure>
+              <img src="images/week3-5.png" alt="Scraped table of programme links from the BBC iPlayer A–Z page">
+            </figure>
+          </div>
+          <div class="slide-nav">
+            <button class="prev" type="button">← Prev</button>
+            <span class="count">1 / 5</span>
+            <button class="next" type="button">Next →</button>
+          </div>
+        </div>
+        <p><a href="data/iplayer-a-z.csv">Download my dataset (CSV, 200 rows)</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Week 4 -->
+  <section class="print" id="week-4" aria-label="Week 4">
+    <a class="close" href="#">Close</a>
+    <div class="print-body">
+      <div class="col">
+        <h2>Week 4</h2>
+        <p>This week our group took on the role of a student advisory board in an arts and humanities faculty. We explored students' experiences of generative AI, focusing on similar writing outputs and the loss of personal voice.</p>
+        <p>Choosing search terms was the hardest part. Broad queries brought back a mixture of discussions, and we had to work out which ones related to our topic. Narrower queries sometimes returned very few results. We were also learning how to use Bluesky and Communalytic, which made it harder to judge whether to adjust the search or the way we used the tools.</p>
+        <p>The experience made me pay attention to how a research question becomes a search query. A phrase such as &quot;losing my voice AI&quot; directs attention towards concerns about AI writing. The wording helps shape whose experiences appear in the results.</p>
+        <p>Next time, I would begin with a small test search, read the posts, and adjust the keywords around what we wanted to investigate. Recording those changes would help me explain how our dataset took shape.</p>
+      </div>
+      <div class="col">
+        <figure>
+          <img src="images/week4-collection-output.png" alt="Group collection log with five search queries and 151 records">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Week 5 -->
+  <section class="print" id="week-5" aria-label="Week 5">
+    <a class="close" href="#">Close</a>
+    <div class="print-body">
+      <div class="col">
+        <h2>Week 5</h2>
+        <p>This week we worked with our group's collected results and their visualisations. The collection output reported 151 records. The document included a keyword bar chart, a daily timeline, a sentiment histogram and a word cloud.</p>
+        <p>The keyword chart showed three queries returning 50 records each and another returning one. The collection workflow set a maximum of 50 posts per query. Reading the chart alongside that setting helped me see how search terms and collection settings shape the numbers we present.</p>
+        <p>In the word cloud, words such as &quot;writing&quot;, &quot;voice&quot; and &quot;humanities&quot; stood out. These connected directly to our search terms and research focus. I wanted to understand how people used those words in their posts, so reading the text would be an important next step in interpreting the visualisation.</p>
+        <p>For the faculty audience, I would connect each chart to our question about AI writing and personal voice, and explain how the records were collected and counted. This week shifted my attention from making charts to deciding what each chart helps the audience understand.</p>
+      </div>
+      <div class="col">
+        <div class="slides">
+          <div class="track">
+            <figure>
+              <img src="images/week5-keywords.png" alt="Number of records returned for each search query">
+            </figure>
+            <figure>
+              <img src="images/week5-time-trend.png" alt="Daily counts in the collected sample">
+            </figure>
+            <figure>
+              <img src="images/week5-sentiment.png" alt="Distribution of automated sentiment polarity scores">
+            </figure>
+            <figure>
+              <img src="images/week5-word-cloud.png" alt="Word cloud of frequent terms in the collected posts">
+            </figure>
+          </div>
+          <div class="slide-nav">
+            <button class="prev" type="button">← Prev</button>
+            <span class="count">1 / 4</span>
+            <button class="next" type="button">Next →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Week 6 -->
+  <section class="print" id="week-6" aria-label="Week 6">
+    <a class="close" href="#">Close</a>
+    <div class="print-body">
+      <div class="col">
+        <h2>Week 6</h2>
+        <p>This week I learned how platforms use digital traces to build an algorithmic identity. Searches, likes and browsing can become information used to classify users. I began to think about my online identity as something shaped through everyday interactions with platforms.</p>
+        <p>The input, output and process framework helped me connect these ideas. Our activities provide input; platforms process those activities and produce categories, profiles and recommendations. Thinking about Douyin made me more interested in how my interactions could contribute to the interests assigned to me.</p>
+        <p>The classification task asks us to place each post into one category. A photograph of friends on a hike could fit both friends and outdoors. Choosing one category highlights a particular part of that person's activity. Changing the categories could change the picture we build of them.</p>
+        <p>This brought together our earlier work on data collection and visualisation. Keywords shape what we collect, categories shape how we organise it, and charts shape how we present it. I now want to pay closer attention to who chooses these categories and how those choices influence the way people are understood.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js?v=34a3ff05"></script>
+</body>
+</html>
 
   <!-- About -->
   <section class="print" id="about" aria-label="About">
